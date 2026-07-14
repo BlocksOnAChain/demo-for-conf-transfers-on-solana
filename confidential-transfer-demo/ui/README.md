@@ -1,5 +1,7 @@
 # Confidential Transfer Demo — UI
 
+**Live: [ui-seven-mocha.vercel.app](https://ui-seven-mocha.vercel.app)**
+
 Companion visualization for the real Solana devnet run captured in
 [`../evidence/devnet-run.json`](../evidence/devnet-run.json) — see the
 [parent README](../README.md) for the full picture (what was built, how the devnet

@@ -1,5 +1,9 @@
 # Allfunds x Solana — Confidential Settlement Demos
 
+**Live demos:**
+- 🎤 [allfunds-demo.vercel.app](https://allfunds-demo.vercel.app) — mocked sales walkthrough
+- 🔍 [ui-seven-mocha.vercel.app](https://ui-seven-mocha.vercel.app) — real devnet evidence viewer
+
 Two companion demos, kept in separate subfolders of this one repo so it's a single link
 to share, while staying clear about which is which:
 

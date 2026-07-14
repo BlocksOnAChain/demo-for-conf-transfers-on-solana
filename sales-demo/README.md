@@ -1,5 +1,7 @@
 # Allfunds x Solana — Private Distribution & Confidential Settlement (Demo)
 
+**Live: [allfunds-demo.vercel.app](https://allfunds-demo.vercel.app)**
+
 An interactive, **fully mocked/illustrative** walkthrough built for a business-audience call:
 how Allfunds' existing permissioned distribution network (banks, wealth managers, fund
 houses) could translate onto Solana using two complementary privacy layers —
