@@ -7,7 +7,3 @@ dist/
 # Public keys/evidence are committed via evidence/devnet-run.json;
 # the raw secret keys never need to leave this machine.
 evidence/keypairs/
-
-# Generated copy of evidence/devnet-run.json for the UI to import;
-# regenerated automatically by ui/scripts/copy-evidence.mjs.
-ui/src/data/devnet-run.json
