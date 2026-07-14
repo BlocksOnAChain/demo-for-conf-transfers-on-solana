@@ -1,8 +1,14 @@
 import { ChevronLeft, ChevronRight, Play, Pause, RotateCcw } from 'lucide-react'
 import { cn } from '../utils/cn'
-import { SCENARIO } from '../data/scenario'
+
+export interface StepMeta {
+  id: string
+  title: string
+  phase: string
+}
 
 interface Props {
+  steps: StepMeta[]
   index: number
   isPlaying: boolean
   onPrev: () => void
@@ -12,13 +18,13 @@ interface Props {
   onReset: () => void
 }
 
-export function StepControls({ index, isPlaying, onPrev, onNext, onJump, onTogglePlay, onReset }: Props) {
-  const total = SCENARIO.length
+export function StepControls({ steps, index, isPlaying, onPrev, onNext, onJump, onTogglePlay, onReset }: Props) {
+  const total = steps.length
 
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-1.5">
-        {SCENARIO.map((step, i) => (
+        {steps.map((step, i) => (
           <button
             key={step.id}
             type="button"
@@ -34,7 +40,7 @@ export function StepControls({ index, isPlaying, onPrev, onNext, onJump, onToggl
 
       <div className="flex items-center justify-between">
         <span className="text-xs font-medium text-slate-500">
-          Step {index + 1} of {total} · {SCENARIO[index].phase}
+          Step {index + 1} of {total} · {steps[index].phase}
         </span>
 
         <div className="flex items-center gap-2">
