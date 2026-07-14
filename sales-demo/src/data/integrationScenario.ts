@@ -28,7 +28,6 @@ export interface MilestoneRow {
   focus: string
   outcome: string
   duration: string
-  pricing: string
 }
 
 export const MILESTONES: MilestoneRow[] = [
@@ -38,7 +37,6 @@ export const MILESTONES: MilestoneRow[] = [
     outcome:
       'Strategy, product, operating model, commercial framework and RFP completed; anchor issuer and distributor confirmed as early adopters',
     duration: '5 months',
-    pricing: '€187,000',
   },
   {
     milestone: 'Milestones 1 + 2',
@@ -46,7 +44,6 @@ export const MILESTONES: MilestoneRow[] = [
     outcome:
       'Full issuance and distribution lifecycle (subscription + redemption) for funds issued either direction, with a single unified off-chain aggregation registry',
     duration: '5 months, concurrent',
-    pricing: '€258,000 combined',
   },
   {
     milestone: 'Milestone 3',
@@ -54,7 +51,6 @@ export const MILESTONES: MilestoneRow[] = [
     outcome:
       'First real-world regulated investment fund issued on Solana via the AFBc–Asseto integration, with at least one live subscription or redemption confirmed on-chain',
     duration: '1 month',
-    pricing: '€149,000',
   },
 ]
 
@@ -66,7 +62,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     milestone: 'Overview',
     title: 'A second track: the Asseto ↔ AFBc integration, already underway',
     description:
-      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration as a funded grant program — \"Harmonia\" — with real milestones and pricing. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
+      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration as a funded grant program — \"Harmonia\" — with a real, milestoned build plan. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
     edges: [],
     activeNodes: [],
     notes: [

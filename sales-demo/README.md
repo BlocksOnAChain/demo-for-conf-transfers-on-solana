@@ -26,17 +26,19 @@ Five tabs:
 1. **Why this stack** — the two-layer architecture, why it fits Allfunds' distribution
    network shape, and the reference architecture (Token-2022 extensions used, inbound/
    outbound subscription & redemption flow).
-2. **Live flow** — a step-through animation of a subscription moving through the private
-   channel and settling into a confidential-balance token account, with a toggle between
-   "public view" (what a competitor/outsider sees) and "regulator view" (what the auditor
-   key decrypts). Purely the illustrative privacy architecture — nothing else mixed in.
-3. **Harmonia** — a separate, self-contained step-through grounded in ioBuilders' actual
-   "Harmonia" grant proposal (AFBc ↔ Asseto ↔ Solana): both fund-issuance use cases
-   (AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc),
-   and a closing milestone/pricing table sourced directly from that proposal. Deliberately
-   kept on its own tab, with its own diagram and timeline, rather than mixed into Live
-   flow — one is an illustrative vision, the other is a funded, scoped program, and
-   blending them would blur which is which.
+2. **Live Flow: Privacy** — a step-through animation of a subscription moving through the
+   private channel and settling into a confidential-balance token account, with a toggle
+   between "public view" (what a competitor/outsider sees) and "regulator view" (what the
+   auditor key decrypts). Purely the illustrative privacy architecture — nothing else
+   mixed in.
+3. **Live Flow: Asseto & AFBc on Solana** — a separate, self-contained step-through
+   grounded in ioBuilders' actual "Harmonia" grant proposal: both fund-issuance use cases
+   (AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc), and
+   a closing milestone table sourced from that proposal's build plan (scope and duration
+   only — no pricing/commercial figures are shown or included anywhere in this app).
+   Deliberately kept on its own tab, with its own diagram and timeline, rather than mixed
+   into the privacy flow — one is an illustrative vision, the other is a funded, scoped
+   program, and blending them would blur which is which.
 4. **Trade-offs & status** — what's live on mainnet today vs. still maturing (e.g. private
    channels are pre-audit), the trade-offs worth flagging out loud, and reference repos.
 5. **Architecture comparison** — a closing summary mapping Allfunds' existing Hyperledger

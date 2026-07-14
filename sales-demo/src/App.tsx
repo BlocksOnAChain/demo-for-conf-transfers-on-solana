@@ -9,8 +9,8 @@ import { ArchitectureComparison } from './pages/ArchitectureComparison'
 
 const TABS = [
   { id: 'stack', label: 'Why this stack', icon: Layers3, Page: StackOverview },
-  { id: 'flow', label: 'Live flow', icon: PlayCircle, Page: LiveFlow },
-  { id: 'harmonia', label: 'Harmonia', icon: ArrowRightLeft, Page: HarmoniaFlow },
+  { id: 'flow', label: 'Live Flow: Privacy', icon: PlayCircle, Page: LiveFlow },
+  { id: 'harmonia', label: 'Live Flow: Asseto & AFBc on Solana', icon: ArrowRightLeft, Page: HarmoniaFlow },
   { id: 'tradeoffs', label: 'Trade-offs & status', icon: ClipboardList, Page: TradeOffs },
   { id: 'comparison', label: 'Architecture comparison', icon: GitCompare, Page: ArchitectureComparison },
 ] as const

@@ -3,14 +3,13 @@ import { MILESTONES } from '../data/integrationScenario'
 export function MilestoneTable() {
   return (
     <div className="overflow-x-auto rounded-2xl border border-ink-700 bg-ink-900">
-      <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+      <table className="w-full min-w-[680px] border-collapse text-left text-sm">
         <thead>
           <tr className="border-b border-ink-700 text-xs uppercase tracking-wide text-slate-500">
             <th className="px-4 py-3 font-medium">Milestone</th>
             <th className="px-4 py-3 font-medium">Focus area</th>
             <th className="px-4 py-3 font-medium">Key outcome</th>
             <th className="px-4 py-3 font-medium">Duration</th>
-            <th className="px-4 py-3 font-medium text-amber-400">Pricing</th>
           </tr>
         </thead>
         <tbody>
@@ -20,7 +19,6 @@ export function MilestoneTable() {
               <td className="px-4 py-3 text-slate-300">{row.focus}</td>
               <td className="px-4 py-3 text-slate-400">{row.outcome}</td>
               <td className="px-4 py-3 whitespace-nowrap text-slate-300">{row.duration}</td>
-              <td className="px-4 py-3 whitespace-nowrap text-amber-400">{row.pricing}</td>
             </tr>
           ))}
         </tbody>
