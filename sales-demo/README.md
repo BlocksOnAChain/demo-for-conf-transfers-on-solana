@@ -19,7 +19,7 @@ verifiable on-chain.
 
 ## What's in the app
 
-Three tabs:
+Four tabs:
 
 1. **Why this stack** — the two-layer architecture, why it fits Allfunds' distribution
    network shape, and the reference architecture (Token-2022 extensions used, inbound/
@@ -30,6 +30,12 @@ Three tabs:
    key decrypts).
 3. **Trade-offs & status** — what's live on mainnet today vs. still maturing (e.g. private
    channels are pre-audit), the trade-offs worth flagging out loud, and reference repos.
+4. **Architecture comparison** — a closing summary mapping Allfunds' existing Hyperledger
+   Besu privacy groups onto Solana's private channel (L2) + Confidential Balances (L1),
+   dimension by dimension (what's hidden, what's still visible, the mechanism, auditor
+   access, granularity). Same comparison as in `../confidential-transfer-demo/ui`, kept in
+   sync by hand since this copy is intentionally self-contained (no dependency on real
+   evidence data, unlike the other app's version).
 
 ## Running locally
 
