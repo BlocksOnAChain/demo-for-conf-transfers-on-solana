@@ -1,71 +1,39 @@
-# Allfunds x Solana — Confidential Transfer Technical Deep-Dive
+# Allfunds x Solana — Confidential Settlement Demos
 
-A **real** Solana devnet build (not a simulation, not mocked data) demonstrating Token-2022
-Confidential Balances end to end: mint creation, wallet/key structure, minting, deposit,
-a real confidential transfer between two wallets, and an auditor independently decrypting
-the transfer amount from on-chain data alone.
+Two companion demos, kept in separate subfolders of this one repo so it's a single link
+to share, while staying clear about which is which:
 
-This is a companion to, and deliberately kept in its own repo separate from, the
-`allfunds-demo` private-channels sales demo — that one is an illustrative/mocked
-walkthrough of the private-channel + confidential-balances architecture for a business
-audience. This repo is the technical proof: real keys, a real mint, a real transfer,
-verifiable independently on Solana's devnet explorer.
+- **[`sales-demo/`](sales-demo/)** — an interactive, **fully mocked/illustrative**
+  walkthrough for a business-audience call: the two-layer privacy architecture
+  (confidential balances + private channels), a step-through of a subscription flowing
+  through it, and a trade-offs/status page. No real chain interaction, no dependencies —
+  built to run instantly for a live pitch.
+- **[`confidential-transfer-demo/`](confidential-transfer-demo/)** — a **real** Solana
+  devnet build: an actual Token-2022 mint with the `ConfidentialTransferMint` extension,
+  real wallets and keys, a real confidential transfer between them, and an auditor
+  independently decrypting the amount from on-chain data. Includes the captured evidence
+  (real addresses and transaction signatures — verifiable on Solana's devnet explorer)
+  and a companion UI that visualizes it, plus docs mapping Allfunds' existing Hyperledger
+  Besu privacy groups onto Solana's model.
 
-## What's here
+They're deliberately not blended into one app: one is a narrative simulation, the other
+is an on-chain proof, and conflating them would make it unclear which claims are backed
+by a real transaction and which are illustrative.
 
-- [`scripts/build-devnet-demo.ts`](scripts/build-devnet-demo.ts) — the real devnet build.
-  Creates a Token-2022 mint with the `ConfidentialTransferMint` extension and an auditor
-  ElGamal key, configures confidential accounts for two wallets ("Banco Alfa" and "Banca
-  Meridian" — same names as the sales demo, for continuity), mints, deposits, executes a
-  real confidential transfer, decrypts both parties' balances to verify correctness, and
-  finally decrypts the transfer amount as the auditor using only on-chain data.
-- [`evidence/devnet-run.json`](evidence/devnet-run.json) — the captured output of the most
-  recent real run: real addresses, real transaction signatures, real (encrypted) balances.
-- [`docs/PRIVACY-GROUPS.md`](docs/PRIVACY-GROUPS.md) — how Allfunds' existing Hyperledger
-  Besu privacy groups map onto Solana's model (private channels + confidential balances).
-- [`docs/KEYS-AND-ENCRYPTION.md`](docs/KEYS-AND-ENCRYPTION.md) — wallet structure, key
-  derivation, minting flow, and the encryption scheme, all grounded in the real run above.
-- [`ui/`](ui/) — a small companion app that visualizes the captured evidence.
+## Running either one
 
-## Running it yourself
-
-Requires Node >= 24 (the ZK proof WASM package needs it) and a little devnet SOL.
+Each subfolder is independently runnable — see its own README for details:
 
 ```bash
-nvm install 24 && nvm use 24
-npm install
-npm run build-devnet-demo
+cd sales-demo && npm install && npm run dev                    # mocked walkthrough
+cd confidential-transfer-demo/ui && npm install && npm run dev # real-evidence viewer
 ```
 
-The script funds itself: it tries the public devnet faucet first, and if that's
-rate-limited (common), it falls back to transferring a small amount from your local
-`~/.config/solana/id.json` CLI keypair, if you have one with a devnet balance. Wallet
-keypairs it generates are persisted under `evidence/keypairs/` (gitignored) so a failed
-run's funding isn't wasted on retry.
+## Deploying
 
-Every transaction signature it produces links to `explorer.solana.com?cluster=devnet` —
-click through and check the raw instruction data yourself; nothing here asks you to take
-its word for it.
+Both are static Vite/React builds with no secrets or environment variables. If deploying
+on Vercel/Netlify, set the project's Root Directory to the subfolder you want:
+- `sales-demo` for the mocked walkthrough
+- `confidential-transfer-demo/ui` for the real-evidence viewer
 
-## Deploying the UI
-
-The `evidence/devnet-run.json` in this repo is already-captured real data, so you don't
-need Node 24 or devnet SOL just to *view* the demo — only to regenerate fresh evidence.
-See [`ui/README.md`](ui/README.md) for exact deploy steps (Vercel/Netlify, static, no
-secrets, no environment variables). Short version: point your host at this repo with
-`ui` as the root/subdirectory and build command `npm run build`.
-
-## Related repo
-
-[`allfunds-demo`](https://github.com/BlocksOnAChain/allfunds-demo) — the mocked/illustrative
-sales walkthrough this build is a technical companion to.
-
-## Why a separate repo
-
-The private-channels sales demo intentionally uses mocked/simulated data — it's built to
-run instantly in a browser for a live pitch, and private channels themselves are a
-pre-audit reference implementation with no public devnet deployment to point at. This
-repo is the opposite tradeoff: it's slower to run and requires devnet SOL, but every
-number in it is real, because Token-2022 Confidential Balances **is** live on devnet
-(and mainnet) today. Keeping them in separate repos avoids implying the private-channel
-walkthrough is backed by the same kind of on-chain proof this one provides.
+See each subfolder's README for the exact build command and output directory.

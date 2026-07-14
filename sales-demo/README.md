@@ -12,10 +12,10 @@ houses) could translate onto Solana using two complementary privacy layers —
 
 There is no live/on-chain data here — every number, wallet, and transaction in this app
 is simulated for narrative purposes. For a companion build with a **real** Solana devnet
-confidential-transfer run (real keys, real mint, real transaction signatures), see the
-separate [`allfunds-confidential-transfer-demo`](https://github.com/BlocksOnAChain/allfunds-confidential-transfer-demo)
-repo — the two are kept apart deliberately so it's never ambiguous which one is mocked
-and which one is independently verifiable on-chain.
+confidential-transfer run (real keys, real mint, real transaction signatures), see
+[`../confidential-transfer-demo`](../confidential-transfer-demo) — the two are kept apart
+deliberately so it's never ambiguous which one is mocked and which one is independently
+verifiable on-chain.
 
 ## What's in the app
 
@@ -50,8 +50,8 @@ npm run build   # outputs to dist/
 ```
 
 Deploy `dist/` to any static host (Vercel, Netlify, GitHub Pages, Cloudflare Pages). On
-Vercel/Netlify you can also just point them at this repo directly with the defaults
-(build command `npm run build`, output directory `dist`) — no extra configuration needed.
+Vercel/Netlify, point them at the repo with Root Directory set to `sales-demo` and the
+defaults otherwise (build command `npm run build`, output directory `dist`).
 
 ## Stack
 

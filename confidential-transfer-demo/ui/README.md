@@ -2,8 +2,8 @@
 
 Companion visualization for the real Solana devnet run captured in
 [`../evidence/devnet-run.json`](../evidence/devnet-run.json) — see the
-[repo root README](../README.md) for the full picture (what was built, how the devnet
-run works, why this is a separate repo from the mocked sales demo).
+[parent README](../README.md) for the full picture (what was built, how the devnet
+run works, why this is a separate subfolder from the mocked sales demo).
 
 This app is a **static site with no backend and no live devnet calls**. It reads the
 already-captured evidence JSON (mint address, wallet addresses, ElGamal pubkeys,
@@ -31,15 +31,16 @@ Pure static output, no environment variables or secrets required:
 npm run build   # runs copy-evidence, then tsc -b && vite build -> dist/
 ```
 
-**If deploying on Vercel/Netlify/etc., set the project root to this whole repo (not just
-`ui/`) with `ui` as the subdirectory / "Root Directory" setting**, and keep the build
-command as `npm run build` with output directory `ui/dist`. The evidence-copy step needs
-`../evidence/devnet-run.json` to exist one level up from `ui/` at build time — most static
-hosts clone the full repo and only scope the *build command's* working directory to the
-subdirectory you specify, so this resolves correctly as long as you don't do a sparse
-checkout of `ui/` alone.
+**If deploying on Vercel/Netlify/etc., set the project's Root Directory to
+`confidential-transfer-demo/ui`** (this app lives two levels down from the actual repo
+root), and keep the build command as `npm run build` with output directory `dist`. The
+evidence-copy step tries `../evidence/devnet-run.json` (i.e.
+`confidential-transfer-demo/evidence/devnet-run.json`) first and falls back to the
+already-committed `src/data/devnet-run.json` in this folder if that's not reachable — so
+it builds correctly either way, whether your host checks out the full repo or only this
+subdirectory.
 
 Want fresh on-chain evidence instead of the captured run in this repo? Run
-`npm run build-devnet-demo` from the repo root first (needs Node ≥ 24 and a little devnet
-SOL) — it overwrites `evidence/devnet-run.json`, and the next `npm run dev`/`build` in
-here will pick it up automatically.
+`npm run build-devnet-demo` from `confidential-transfer-demo/` first (needs Node ≥ 24 and
+a little devnet SOL) — it overwrites `evidence/devnet-run.json`, and the next `npm run
+dev`/`build` in here will pick it up automatically.
