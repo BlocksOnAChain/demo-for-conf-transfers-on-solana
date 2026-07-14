@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  --color-solana-purple: #9945ff;
+  --color-solana-green: #14f195;
+  --color-ink-950: #08070d;
+  --color-ink-900: #0d0c16;
+  --color-ink-850: #121120;
+  --color-ink-800: #17162a;
+  --color-ink-700: #211f38;
+  --color-ink-600: #2c2a49;
+  --color-ink-500: #3d3a63;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink-950);
+  color: #e8e6f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(153, 69, 255, 0.35);
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 6 6;
+  animation: dash-flow 1s linear infinite;
+}
