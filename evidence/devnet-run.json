@@ -1,0 +1,71 @@
+{
+  "network": "devnet",
+  "generatedAt": "2026-07-08T08:31:54.078Z",
+  "decimals": 2,
+  "mint": {
+    "address": "7juBfAHhSgj45FY8SRJ4m3QyPqEytT3fma94SMoHL9z9",
+    "explorer": "https://explorer.solana.com/address/7juBfAHhSgj45FY8SRJ4m3QyPqEytT3fma94SMoHL9z9?cluster=devnet",
+    "authority": "AsUVkp5EBG59TGPzEKZMt1T4kwARer3sn8up9yqMpjfZ",
+    "auditorElgamalPubkey": "E6Ug7MuCrTu3C9aqcDCFgYr2YnsNfAURDLoxtHZf8n9F"
+  },
+  "wallets": {
+    "bancoAlfa": {
+      "owner": "57nf34moAeaPuAq9o7PaKafmsSWi2iHaSJr1fe78iTKd",
+      "explorer": "https://explorer.solana.com/address/57nf34moAeaPuAq9o7PaKafmsSWi2iHaSJr1fe78iTKd?cluster=devnet",
+      "tokenAccount": "FehLWG9q8QXhWDAndotkLtR3H6RHbasDLNSms4dxVpdE",
+      "tokenAccountExplorer": "https://explorer.solana.com/address/FehLWG9q8QXhWDAndotkLtR3H6RHbasDLNSms4dxVpdE?cluster=devnet",
+      "elgamalPubkey": "88ysCdyxkqKMLTWWc3z9ttV65skySstgNdXBPiwdGbDL",
+      "finalDecryptedBalance": "2500000",
+      "finalDecryptedBalanceDisplay": "25,000.00",
+      "rawEncryptedAvailableBalanceBase64": "2An/sArSWaNnW/08RJL1iuVoeCT/NpwXAGMhsrgCYBdwgJMnqJu6Dhot2Dvb8/yJxyu6pOUoyTy6P6jhj4iPVw=="
+    },
+    "bancaMeridian": {
+      "owner": "BAd55S3P8ycpbBFWdVuxqENF9df7XcAsjhomaf9hZ7uA",
+      "explorer": "https://explorer.solana.com/address/BAd55S3P8ycpbBFWdVuxqENF9df7XcAsjhomaf9hZ7uA?cluster=devnet",
+      "tokenAccount": "A2C3BCP17wJAHcMiGAKnGVNJCzKrgwmvuxmZVGTcHT4r",
+      "tokenAccountExplorer": "https://explorer.solana.com/address/A2C3BCP17wJAHcMiGAKnGVNJCzKrgwmvuxmZVGTcHT4r?cluster=devnet",
+      "elgamalPubkey": "HKERjtTj98h4MW5yZUsdmQXE9WpWRkhAhvmd4LTuJM28",
+      "finalDecryptedBalance": "1500000",
+      "finalDecryptedBalanceDisplay": "15,000.00",
+      "rawEncryptedAvailableBalanceBase64": "OCUJfusnwmZcOiqHfdfAtdVS5ytx/RGeyZmrYZFGrlZItkjCM07HcxGlhGcNuGhekTaTiW2bKQ+Wurt5fWNUQw=="
+    }
+  },
+  "transfer": {
+    "amount": "1500000",
+    "amountDisplay": "15,000.00",
+    "signature": "2QBeKnVXGT6eEiS9Zszi72afbT7o7g7ADgshVMj4Py5wthhYMHUJY6K2FWgRAoEDTMgajQhYwdbb9yBDPef9qCZv",
+    "explorer": "https://explorer.solana.com/tx/2QBeKnVXGT6eEiS9Zszi72afbT7o7g7ADgshVMj4Py5wthhYMHUJY6K2FWgRAoEDTMgajQhYwdbb9yBDPef9qCZv?cluster=devnet",
+    "auditorDecryptedAmount": "1500000",
+    "auditorDecryptedAmountDisplay": "15,000.00"
+  },
+  "transactions": {
+    "1-create-mint": [
+      "tVe2E8wKgAWLYKfqUBbX3VCxoPmU5KJJVwGC1BxqJ7AUvhHx5PurhaEngLtfcPjGDL6ApDLz8aU58mTvUu8B5y9"
+    ],
+    "2a-configure-alfa-account": [
+      "4ZUPbMCpPKvfuoxejmtLjVjrkcf8YXgZWCX8Jn7fMb3o7TkYy5XsFR1HJTZbiCXRmAJmGKim8awH6Ld2ZvZZST1r"
+    ],
+    "2b-configure-meridian-account": [
+      "5CYWhToeuh7K8Xfeins5zRhWrhXfYGSRefmA9kZpdf6iqBdJ4fcwyBtVSDpLi69RArRmTLZyfLQNng4ZxZzXPnKw"
+    ],
+    "3-mint-to-alfa": [
+      "JRjV2AFLsRsJvJb1yqSjyQbjFjxHp7SYNiyJEkevnJ6eJdbx68V6SoiC25BiGbKjZh1CHq3fo43jp36z6xoh9HF"
+    ],
+    "4-deposit-pending-balance": [
+      "EXtm5smPEfDBLLfyetVv4jzwTqjUkTmXoyDE1CRwQM9Bh6HMtGUEpydcy9G8RQuQjvQPHgyScRDN4nQRPrNbT8H"
+    ],
+    "5-apply-pending-alfa": [
+      "45gZWu4W5J26QJzqKYHi3c8FsGig4RK539GfZ3DMyz8wGt1R736NotY1Ff5JZia9ZE9fXWy3PXJJv8Gi7mpZnJFF"
+    ],
+    "7-confidential-transfer": [
+      "3S8Kd5qZ8ph9YgBwF7U7TEdniNhRAQZzttxFZ8QU8QzxcMdzPD4ENX7hhK67zd8LXWdyDXenCstTsb1wJPBfHcTP",
+      "5MDs7Y1tYqAgDFLTFDkW4qucwTjwb7rAUdqxeADyd2DiwGb6cAaHQiRAGYqTVAqPwLFExN7zyX5MRT6SnqG2Utjn",
+      "27u5ehedpt6zkMk7Nsvg1etuPX18JErc4hpTetJ4A5FwZzcomeASGCi2ea254WZ8kHuFYtMJuyVrRkgTjaj23EUy",
+      "5Jh2bPvTVQinjqaf3LFd14qfLyHZo4jaTCVY2SxbpCkobQzfHQGQhM5u8paL4muYoHmXc8dgmnKZVtmhTTrjRZqc",
+      "2QBeKnVXGT6eEiS9Zszi72afbT7o7g7ADgshVMj4Py5wthhYMHUJY6K2FWgRAoEDTMgajQhYwdbb9yBDPef9qCZv"
+    ],
+    "8-apply-pending-meridian": [
+      "5i2ek9VMyvRUaqspWRyyz8QEVv19jidDjWT7yCR1CNJCEGxkDcrzqHFqqqjZKbd9J6GzTuwfW9kx2SJngzmY9jtX"
+    ]
+  }
+}

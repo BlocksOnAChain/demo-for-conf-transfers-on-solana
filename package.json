@@ -1,0 +1,23 @@
+{
+  "name": "allfunds-confidential-transfer-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build-devnet-demo": "tsx scripts/build-devnet-demo.ts"
+  },
+  "dependencies": {
+    "@solana-program/system": "^0.12.2",
+    "@solana-program/token-2022": "^0.12.0",
+    "@solana/kit": "^6.10.0",
+    "@solana/zk-sdk": "^0.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
