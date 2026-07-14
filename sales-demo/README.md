@@ -32,13 +32,13 @@ Five tabs:
    auditor key decrypts). Purely the illustrative privacy architecture — nothing else
    mixed in.
 3. **Live Flow: Asseto & AFBc on Solana** — a separate, self-contained step-through
-   grounded in ioBuilders' actual "Harmonia" grant proposal: both fund-issuance use cases
+   grounded in ioBuilders' actual "Harmonia" integration plan: both fund-issuance use cases
    (AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc), and
-   a closing milestone table sourced from that proposal's build plan (scope and duration
-   only — no pricing/commercial figures are shown or included anywhere in this app).
-   Deliberately kept on its own tab, with its own diagram and timeline, rather than mixed
-   into the privacy flow — one is an illustrative vision, the other is a funded, scoped
-   program, and blending them would blur which is which.
+   a closing milestone table sourced from that plan's build scope (duration only — no
+   pricing/commercial figures, and no reference to funding/grant mechanics, are shown or
+   included anywhere in this app). Deliberately kept on its own tab, with its own diagram
+   and timeline, rather than mixed into the privacy flow — one is an illustrative vision,
+   the other is a real, milestoned build plan, and blending them would blur which is which.
 4. **Trade-offs & status** — what's live on mainnet today vs. still maturing (e.g. private
    channels are pre-audit), the trade-offs worth flagging out loud, and reference repos.
 5. **Architecture comparison** — a closing summary mapping Allfunds' existing Hyperledger

@@ -24,7 +24,7 @@ export function MilestoneTable() {
         </tbody>
       </table>
       <div className="border-t border-ink-800 px-4 py-2.5 text-[11px] text-slate-500">
-        Source: ioBuilders' "Harmonia program: AFBc on Solana via Asseto" grant scope, June 2026. Milestones 1 and 2
+        Source: ioBuilders' "Harmonia program: AFBc on Solana via Asseto" build plan, June 2026. Milestones 1 and 2
         proceed concurrently over the same five months.
       </div>
     </div>

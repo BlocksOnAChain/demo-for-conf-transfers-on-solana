@@ -62,7 +62,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     milestone: 'Overview',
     title: 'A second track: the Asseto ↔ AFBc integration, already underway',
     description:
-      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration as a funded grant program — \"Harmonia\" — with a real, milestoned build plan. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
+      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration under the name \"Harmonia\" — a real, milestoned build plan, not just an architecture sketch. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
     edges: [],
     activeNodes: [],
     notes: [
@@ -175,9 +175,9 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     id: 'int-recap',
     phase: 'Integration',
     milestone: 'Recap',
-    title: 'One off-chain registry, two issuance paths — already a funded program',
+    title: 'One off-chain registry, two issuance paths — already a real build plan',
     description:
-      "Whichever direction a fund is issued, AFBc's off-chain registry ends up with the same complete picture: transaction hashes, timestamps, amounts and distributor identifiers from both networks. This isn't hypothetical — ioBuilders scoped it as the \"Harmonia\" grant program, running across a six-month delivery timeline.",
+      "Whichever direction a fund is issued, AFBc's off-chain registry ends up with the same complete picture: transaction hashes, timestamps, amounts and distributor identifiers from both networks. This isn't hypothetical — ioBuilders scoped \"Harmonia\" with real milestones, running across a six-month delivery timeline.",
     edges: [],
     activeNodes: [],
     showMilestoneTable: true,
