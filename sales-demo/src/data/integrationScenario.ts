@@ -14,55 +14,23 @@ export interface IntegrationStep {
   kind: 'integration'
   id: string
   phase: 'Integration'
-  milestone: string
+  stage: string
   title: string
   description: string
   edges: IntegrationEdge[]
   activeNodes: IntegrationNodeId[]
   notes: string[]
-  showMilestoneTable?: boolean
 }
-
-export interface MilestoneRow {
-  milestone: string
-  focus: string
-  outcome: string
-  duration: string
-}
-
-export const MILESTONES: MilestoneRow[] = [
-  {
-    milestone: 'Milestone 0',
-    focus: 'Business Design, Commercial Framework & RFP',
-    outcome:
-      'Strategy, product, operating model, commercial framework and RFP completed; anchor issuer and distributor confirmed as early adopters',
-    duration: '5 months',
-  },
-  {
-    milestone: 'Milestones 1 + 2',
-    focus: 'AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc',
-    outcome:
-      'Full issuance and distribution lifecycle (subscription + redemption) for funds issued either direction, with a single unified off-chain aggregation registry',
-    duration: '5 months, concurrent',
-  },
-  {
-    milestone: 'Milestone 3',
-    focus: 'First Live Issuance on Solana',
-    outcome:
-      'First real-world regulated investment fund issued on Solana via the AFBc–Asseto integration, with at least one live subscription or redemption confirmed on-chain',
-    duration: '1 month',
-  },
-]
 
 export const INTEGRATION_SCENARIO: IntegrationStep[] = [
   {
     kind: 'integration',
     id: 'int-overview',
     phase: 'Integration',
-    milestone: 'Overview',
+    stage: 'Overview',
     title: 'A second track: the Asseto ↔ AFBc integration, already underway',
     description:
-      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration under the name \"Harmonia\" — a real, milestoned build plan, not just an architecture sketch. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
+      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration under the name \"Harmonia\" — a real, staged build plan, not just an architecture sketch. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
     edges: [],
     activeNodes: [],
     notes: [
@@ -75,7 +43,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     kind: 'integration',
     id: 'int-uc1-issue',
     phase: 'Integration',
-    milestone: 'M1',
+    stage: 'Use Case 1',
     title: 'Use Case 1 — a fund issued on AFBc, extended to Solana',
     description:
       'A Transfer Agent operating within AFBc issues a fund and selects Solana as an additional network. AFBc calls Asseto via API, which mints the corresponding SPL token on Solana mainnet — AFBc remains the primary registry.',
@@ -95,7 +63,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     kind: 'integration',
     id: 'int-uc1-link',
     phase: 'Integration',
-    milestone: 'M1',
+    stage: 'Use Case 1',
     title: 'Token address linked back — one consolidated registry',
     description:
       "Asseto confirms the new token's address back to AFBc, which binds it to the fund's class record and initialises an off-chain aggregator — a single source of truth for activity across both networks going forward.",
@@ -114,7 +82,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     kind: 'integration',
     id: 'int-uc1-distribute',
     phase: 'Integration',
-    milestone: 'M1',
+    stage: 'Use Case 1',
     title: 'Both distributor types can now subscribe or redeem',
     description:
       "An AFBc distributor subscribes entirely within AFBc's existing flow, unchanged. A Solana distributor subscribes directly from a wallet — Asseto mints on-chain and notifies AFBc, which updates the very same off-chain record either way.",
@@ -134,7 +102,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     kind: 'integration',
     id: 'int-uc2-issue',
     phase: 'Integration',
-    milestone: 'M2',
+    stage: 'Use Case 2',
     title: 'Use Case 2 — a fund issued natively on Solana, distributed via AFBc',
     description:
       'The reverse pattern: a fund manager issues directly on Solana through the Asseto Module — no contract is ever deployed on the AFBc network. Asseto simply informs AFBc, which registers the fund off-chain and lists it on the Dealing Market.',
@@ -154,7 +122,7 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     kind: 'integration',
     id: 'int-uc2-redirect',
     phase: 'Integration',
-    milestone: 'M2',
+    stage: 'Use Case 2',
     title: "AFBc orders are redirected — AFBc never executes this fund's logic itself",
     description:
       "An AFBc distributor still orders through the familiar Dealing Market — but because this fund has no AFBc-side contract, AFBc validates the order and redirects the entire order to Asseto for on-chain execution, then simply records the confirmed result.",
@@ -168,23 +136,6 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
       'AFBc validates the order but does not execute any logic on its own network for this fund.',
       'Asseto executes the mint or burn on-chain and confirms back to AFBc.',
       'Solana distributors, meanwhile, order directly against Asseto — same as Use Case 1.',
-    ],
-  },
-  {
-    kind: 'integration',
-    id: 'int-recap',
-    phase: 'Integration',
-    milestone: 'Recap',
-    title: 'One off-chain registry, two issuance paths — already a real build plan',
-    description:
-      "Whichever direction a fund is issued, AFBc's off-chain registry ends up with the same complete picture: transaction hashes, timestamps, amounts and distributor identifiers from both networks. This isn't hypothetical — ioBuilders scoped \"Harmonia\" with real milestones, running across a six-month delivery timeline.",
-    edges: [],
-    activeNodes: [],
-    showMilestoneTable: true,
-    notes: [
-      'Milestone 0 is the prerequisite: without confirmed fund types, an agreed settlement model and at least one anchor issuer and distributor, the technical build has nothing real to validate against.',
-      'Milestones 1 and 2 run concurrently — they’re the same underlying architecture, used in each direction.',
-      'Milestone 3 is the proof point: a real regulated fund, issued for real, with at least one live on-chain subscription or redemption.',
     ],
   },
 ]

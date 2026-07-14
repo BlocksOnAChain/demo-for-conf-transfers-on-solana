@@ -1,10 +1,10 @@
 import { FileCheck2 } from 'lucide-react'
 
-export function IntegrationNotes({ milestone, notes }: { milestone: string; notes: string[] }) {
+export function IntegrationNotes({ stage, notes }: { stage: string; notes: string[] }) {
   return (
     <div className="rounded-xl border border-amber-500/30 bg-ink-900 p-4">
       <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-amber-400">
-        <FileCheck2 size={14} /> Harmonia Flow Steps · {milestone}
+        <FileCheck2 size={14} /> Harmonia Flow Steps · {stage}
       </div>
       <ul className="space-y-1.5 text-[13px] leading-snug text-slate-300">
         {notes.map((line, i) => (

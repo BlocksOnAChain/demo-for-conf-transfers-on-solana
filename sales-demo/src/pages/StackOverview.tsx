@@ -7,7 +7,7 @@ export function StackOverview() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="mb-8 max-w-3xl">
-        <span className="text-xs font-semibold uppercase tracking-wide text-solana-purple">Solana's privacy stack</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-solana-purple">Privacy stack ideas and how this can work on Solana</span>
         <h2 className="mt-2 text-2xl font-semibold text-white sm:text-3xl">Two layers, one right answer for Allfunds</h2>
         <p className="mt-3 text-[15px] leading-relaxed text-slate-400">
           For Allfunds specifically, the right architecture combines{' '}

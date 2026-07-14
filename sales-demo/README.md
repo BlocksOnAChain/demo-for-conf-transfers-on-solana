@@ -21,7 +21,7 @@ verifiable on-chain.
 
 ## What's in the app
 
-Five tabs:
+Four tabs:
 
 1. **Why this stack** — the two-layer architecture, why it fits Allfunds' distribution
    network shape, and the reference architecture (Token-2022 extensions used, inbound/
@@ -33,20 +33,21 @@ Five tabs:
    mixed in.
 3. **Live Flow: Asseto & AFBc on Solana** — a separate, self-contained step-through
    grounded in ioBuilders' actual "Harmonia" integration plan: both fund-issuance use cases
-   (AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc), and
-   a closing milestone table sourced from that plan's build scope (duration only — no
-   pricing/commercial figures, and no reference to funding/grant mechanics, are shown or
-   included anywhere in this app). Deliberately kept on its own tab, with its own diagram
+   (AFBc-native fund extended to Solana, and Solana-native fund distributed via AFBc). No
+   pricing/commercial figures and no reference to funding/grant mechanics are shown or
+   included anywhere in this app. Deliberately kept on its own tab, with its own diagram
    and timeline, rather than mixed into the privacy flow — one is an illustrative vision,
-   the other is a real, milestoned build plan, and blending them would blur which is which.
-4. **Trade-offs & status** — what's live on mainnet today vs. still maturing (e.g. private
-   channels are pre-audit), the trade-offs worth flagging out loud, and reference repos.
-5. **Architecture comparison** — a closing summary mapping Allfunds' existing Hyperledger
+   the other is a real, staged build plan, and blending them would blur which is which.
+4. **Architecture comparison** — a closing summary mapping Allfunds' existing Hyperledger
    Besu privacy groups onto Solana's private channel (L2) + Confidential Balances (L1),
    dimension by dimension (what's hidden, what's still visible, the mechanism, auditor
    access, granularity). Same comparison as in `../confidential-transfer-demo/ui`, kept in
    sync by hand since this copy is intentionally self-contained (no dependency on real
    evidence data, unlike the other app's version).
+
+The "Trade-offs & status" page (what's live vs. maturing, trade-offs to flag, reference
+repos) was intentionally removed from the app — that material gets covered verbally on
+the call instead.
 
 ## Running locally
 

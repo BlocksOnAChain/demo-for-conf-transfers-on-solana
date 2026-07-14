@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { INTEGRATION_SCENARIO } from '../data/integrationScenario'
 import { IntegrationDiagram } from '../components/IntegrationDiagram'
 import { IntegrationNotes } from '../components/IntegrationNotes'
-import { MilestoneTable } from '../components/MilestoneTable'
 import { StepControls } from '../components/StepControls'
 
 const STEP_DURATION_MS = 4500
@@ -50,15 +49,9 @@ export function HarmoniaFlow() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <IntegrationNotes milestone={step.milestone} notes={step.notes} />
+          <IntegrationNotes stage={step.stage} notes={step.notes} />
         </div>
       </div>
-
-      {step.showMilestoneTable && (
-        <div className="mt-6">
-          <MilestoneTable />
-        </div>
-      )}
     </div>
   )
 }
