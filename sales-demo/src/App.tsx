@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import { Layers3, PlayCircle, ClipboardList, Sparkles, GitCompare } from 'lucide-react'
+import { Layers3, PlayCircle, ClipboardList, Sparkles, GitCompare, ArrowRightLeft } from 'lucide-react'
 import { cn } from './utils/cn'
 import { StackOverview } from './pages/StackOverview'
 import { LiveFlow } from './pages/LiveFlow'
+import { HarmoniaFlow } from './pages/HarmoniaFlow'
 import { TradeOffs } from './pages/TradeOffs'
 import { ArchitectureComparison } from './pages/ArchitectureComparison'
 
 const TABS = [
   { id: 'stack', label: 'Why this stack', icon: Layers3, Page: StackOverview },
   { id: 'flow', label: 'Live flow', icon: PlayCircle, Page: LiveFlow },
+  { id: 'harmonia', label: 'Harmonia', icon: ArrowRightLeft, Page: HarmoniaFlow },
   { id: 'tradeoffs', label: 'Trade-offs & status', icon: ClipboardList, Page: TradeOffs },
   { id: 'comparison', label: 'Architecture comparison', icon: GitCompare, Page: ArchitectureComparison },
 ] as const

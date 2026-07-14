@@ -1,25 +1,24 @@
 import { useEffect, useState } from 'react'
-import { SCENARIO } from '../data/scenario'
-import { NetworkDiagram } from '../components/NetworkDiagram'
-import { VisibilityPanel } from '../components/VisibilityPanel'
-import { ConfidentialBalanceToggle } from '../components/ConfidentialBalanceToggle'
-import { SummaryTable } from '../components/SummaryTable'
+import { INTEGRATION_SCENARIO } from '../data/integrationScenario'
+import { IntegrationDiagram } from '../components/IntegrationDiagram'
+import { IntegrationNotes } from '../components/IntegrationNotes'
+import { MilestoneTable } from '../components/MilestoneTable'
 import { StepControls } from '../components/StepControls'
 
 const STEP_DURATION_MS = 4500
 
-export function LiveFlow() {
+export function HarmoniaFlow() {
   const [index, setIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
-  const step = SCENARIO[index]
+  const step = INTEGRATION_SCENARIO[index]
 
   useEffect(() => {
     if (!isPlaying) return
-    if (index >= SCENARIO.length - 1) {
+    if (index >= INTEGRATION_SCENARIO.length - 1) {
       setIsPlaying(false)
       return
     }
-    const timer = setTimeout(() => setIndex((i) => Math.min(i + 1, SCENARIO.length - 1)), STEP_DURATION_MS)
+    const timer = setTimeout(() => setIndex((i) => Math.min(i + 1, INTEGRATION_SCENARIO.length - 1)), STEP_DURATION_MS)
     return () => clearTimeout(timer)
   }, [isPlaying, index])
 
@@ -37,13 +36,13 @@ export function LiveFlow() {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
         <div className="flex flex-col gap-5">
-          <NetworkDiagram step={step} />
+          <IntegrationDiagram step={step} />
           <StepControls
-            steps={SCENARIO}
+            steps={INTEGRATION_SCENARIO}
             index={index}
             isPlaying={isPlaying}
             onPrev={() => jump(Math.max(0, index - 1))}
-            onNext={() => jump(Math.min(SCENARIO.length - 1, index + 1))}
+            onNext={() => jump(Math.min(INTEGRATION_SCENARIO.length - 1, index + 1))}
             onJump={jump}
             onTogglePlay={() => setIsPlaying((p) => !p)}
             onReset={() => jump(0)}
@@ -51,14 +50,13 @@ export function LiveFlow() {
         </div>
 
         <div className="flex flex-col gap-5">
-          {step.showToggle && <ConfidentialBalanceToggle />}
-          <VisibilityPanel visibility={step.visibility} />
+          <IntegrationNotes milestone={step.milestone} notes={step.notes} />
         </div>
       </div>
 
-      {step.showSummary && (
+      {step.showMilestoneTable && (
         <div className="mt-6">
-          <SummaryTable />
+          <MilestoneTable />
         </div>
       )}
     </div>

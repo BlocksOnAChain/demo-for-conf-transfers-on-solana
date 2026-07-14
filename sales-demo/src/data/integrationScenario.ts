@@ -64,9 +64,9 @@ export const INTEGRATION_SCENARIO: IntegrationStep[] = [
     id: 'int-overview',
     phase: 'Integration',
     milestone: 'Overview',
-    title: 'Meanwhile — a second, concrete integration already underway',
+    title: 'A second track: the Asseto ↔ AFBc integration, already underway',
     description:
-      "Everything above is illustrative. This isn't: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration as a funded grant program — \"Harmonia\" — with real milestones and pricing. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
+      "The other tabs sketch an illustrative privacy architecture. This one is different: ioBuilders has scoped the exact Asseto ↔ Allfunds Blockchain (AFBc) integration as a funded grant program — \"Harmonia\" — with real milestones and pricing. Three components: AFBc Platform (Allfunds' own fund registry and Dealing Market), Asseto Module (ioBuilders' Solana tokenization layer), and the Solana network itself.",
     edges: [],
     activeNodes: [],
     notes: [
